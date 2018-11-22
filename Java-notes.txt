@@ -1,0 +1,169 @@
+inheritance
+-----------------
+1.variables 3
+2.methods 3
+3.constructors 3
+5.instance block 2 
+5.static block 1
+ single multi-level hierarchical are used
+ multiple and hybrid are not used due to ambiguity issue
+ to prevent method overriding declare method as final
+ 
+ static members, fields and non static variable are binded at compile time so they will be selected based on the type of ref variable
+ 
+ 
+ Multithreading
+ --------------------
+ wait and notify methods are performed on shared resources
+ 
+ main methpd has norm_priority
+ 
+ t.getpriority() iss used to find the priority of thread
+ 
+ Thread.currentThread is used to find current thread location 
+ 
+exception handling
+-------------------
+Exception - An unwanted or unexpected event which disturbs normal flow the of program is known as exception.
+Main objective or purpose of Exception handling - Graceful termination of code.
+Meaning - Exception handling doesnt mean to repairing exception. We have to define alternative way to run the code normally.
+Default Exception handling - if there is exception in thread either main or child, then program terminates abnormally.
+exceptions are recoverable
+
+class throwable
+1.class exception
+	1.runtime exception - unchecked
+		ArithmeticException 
+		NullPointerException 
+		ClassCastException 
+		IndexOutOfBoundsException
+			ArrayIndexOutOfBoundsException
+			StringIndexOutOfBoundsException
+		IllegalArgumentException
+			NumberFormatException			
+	2.IOException - checked
+		EOFException
+		InterruptedIOException
+		FileNotFoundException--->its unreportedException---->java.io.FileNotFoundException
+	3.ServletException - checked
+	4.RemoteException
+	5.SQLException
+	6.InterruptedException - checked
+2.class error - unchecked
+	VMError
+		StackOverFlowError
+		OutOfMemoryError
+	AssertionError
+	ExceptionInitialisedError
+	
+the only possible partially checked Exceptions in java are:
+1.throwable
+2.exception
+
+ fully checked
+ 1.error
+ 2.IOException
+ 3.InterruptedException
+ 4.FileNotFoundException
+ 
+ 
+1.try 
+2.catch 
+3.finally 
+4.throw 
+5.throws
+
+two ways to handle exception
+1.try catch
+2.throws
+ 
+types of exception
+exception is either checked or unchecked, compulsory that exception occurs at runtime. 
+1.checked - compile time - class which is not sub class of runtime exception 
+	the exceptions which are checked by compiler for smooth execution of the code at runtime are called checked exceptions
+	e.g.HallTicketMissingException, PenNotWorkingException etc.
+	checked exception compulsory we should handle exception by try-catch or by throws keyword or we will get compile time error
+InterruptedException
+FileNotFoundException
+SQLException	
+2.unchecked - runtime - class which is sub class of runtime exception
+	exceptions which are not checked by compiler then these are unchecked exceptions.
+	e.g.BombBlastException
+ArithmeticException
+ArrayIndexOutOfBoundsException
+StringIndexOutOfBoundsException
+3.error - these are not caused by our program. these are non-recoverable. its because of lack of system resources.
+OutOfMemoryError
+ 
+collection
+----------------
+hashSet does not permit duplicate values.
+A vector permits duplicates
+A treeset is an sorted set
+
+
+
+Language Fundamentals
+----------------------
+char c = '\u0041';
+int i = 0x0041; 
+This both are proper ways 
+byte short char all are integral types.
+
+JSP
+-----
+<%   scriptlet tag %> used to write html code within this tag
+<%!  declarative tag %>
+<%=  expression tag %> -----------------> used to print the data ----> in servlet this will be from --->out.println(request.getParameter("name"));
+
+EL expression -----------------> ${param.name}
+
+<%@   page import=java.util.* %> directives
+<%@ include page="script.jsp" %>
+<%@ taglib uri="syz.com" prefix="my" %>
+
+
+IO operation
+-------------
+info src may be file, nw machine or memory array
+byte stream - byte at a time can be read
+character stream - char at a time can be read
+
+ these all classes are abstract
+
+ ip stream-->fileipstream-->objipstream
+op stream
+
+reader-->filereader---->bufferreader
+writer
+
+Serializable------> is marker interface..it does not have any method
+	saving state of an object into stream
+	
+	
+	transient age
+	
+	file---createNewFile()
+	exists()
+	
+	try(Scanner sc=new Scanner(system.in));
+	
+	methods of scanner------> hasNext(), nextInt()
+	
+	oOut.writeObject &personref
+	
+
+	
+	
+	
+JPA
+--------------
+Query setParameter(int position, obj value)
+getSingleeResult()-->to retrieve single result from db
+@Entity
+@Table(name=gfh)
+@Id
+@Column String name
+
+persist()----> used to store data	
+
